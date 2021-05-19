@@ -1,0 +1,384 @@
+﻿<UserControl x:Class="Project_doing.Практика"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project_doing"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Width="810" Height="425" MinWidth="810" MaxWidth="810" MinHeight="425" MaxHeight="425">
+    <UserControl.Resources>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Кнопка_варианта">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFAE6C8F"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Margin="0" Fill="#B2AE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label" Width="75.023" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="64.215,0,67.441,2" Height="34.35" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="вариант1">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="Вариант2">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Кнопка_варианта">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFAE6C8F"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Fill="#B2AE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label" Width="75.023" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="115.168,0,118.394,2" Height="34.35" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="вариант2">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle3" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="Вариант3" Margin="306.726,91.816,-306.726,-91.816">
+                            <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Fill="#B2AE6C8F" Margin="0">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label" Width="75.023" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="115.168,0,118.394,2" Height="34.35" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="вариант2">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle4" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Кнопка_варианта_Copy">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFAE6C8F"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="Кнопка_варианта_Copy" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Fill="#B2AE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label_Copy" Width="75.023" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="115.168,0,118.394,2" Height="34.35" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="вариант4">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle5" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Кнопка_варианта">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFAE6C8F"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Fill="#B2AE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label" Width="75.023" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="115.168,0,118.394,2" Height="34.35" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="вариант3">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle6" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Кнопка_варианта">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFAE6C8F"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Fill="#B2AE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label" Width="81.077" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="115.168,0,112.34,2" Height="34.35" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="Проверить">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+    <Grid MinHeight="425" MaxHeight="425" MinWidth="810" MaxWidth="810">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF161B57" Offset="0.25"/>
+                <GradientStop Color="#FF6A3672" Offset="0.79"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Path Data="M-34.03157,76.183677 C-23.348491,70.800078 -11.976037,60.828778 -1.6724669,52.375535 12.207311,40.988304 21.898553,35.627973 37.701058,28.445016 71.890093,12.904546 109.70206,19.205593 140.69751,42.802483 183.59864,75.463194 233.42041,126.4928 313.32039,113.17613 345.39032,107.83114 379.97461,87.391401 407.32987,71.910493 434.75641,56.389238 459.60402,45.095806 488.00978,35.627218 522.39627,24.165055 538.37391,20.438047 576.32795,20.438047 596.52382,20.438047 633.99103,27.154694 652.78152,34.556771 670.61193,41.580645 687.97215,48.689743 704.19067,55.640538 739.50706,70.776132 765.82742,84.746408 806.18899,82.600076 828.46502,81.41549 835.12463,76.053099 852.44969,61.203049 866.33697,49.299665 856.95105,31.799666 850.80018,11.809327 845.63539,-4.9762324 838.88401,-15.809729 830.6043,-32.369148 817.39477,-58.788224 819.44992,-50.426987 783.90135,-56.351749 716.81652,-67.532553 648.30038,-61.400717 579.41812,-61.400717 407.33244,-61.400717 235.24676,-61.400717 63.161076,-61.400717 39.781511,-61.400717 15.806048,-63.344929 -7.5244843,-61.400717 -21.494233,-60.236572 -22.67139,-38.626836 -22.67139,-18.484484 -22.67139,-0.50471779 -17.622422,16.824659 -17.622422,35.791928 -17.622422,57.427154 -17.694089,59.650074 -30.244843,77.445919" HorizontalAlignment="Left" Height="179" Margin="-34,-22,-51,0" Stretch="Fill" VerticalAlignment="Top" Width="895">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.472,1.343" StartPoint="0.499,-0.414">
+                    <GradientStop Color="#FF0D1123" Offset="0.183"/>
+                    <GradientStop Color="#FF262272" Offset="0.544"/>
+                    <GradientStop Color="#FF3A28B0" Offset="0.941"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M-34.03157,76.183677 C-23.348491,70.800078 -11.976037,60.828778 -1.6724669,52.375535 12.207311,40.988304 21.898553,35.627973 37.701058,28.445016 71.890093,12.904546 109.70206,19.205593 140.69751,42.802483 183.59864,75.463194 233.42041,126.4928 313.32039,113.17613 345.39032,107.83114 379.97461,87.391401 407.32987,71.910493 434.75641,56.389238 459.60402,45.095806 488.00978,35.627218 522.39627,24.165055 538.37391,20.438047 576.32795,20.438047 596.52382,20.438047 633.99103,27.154694 652.78152,34.556771 670.61193,41.580645 687.97215,48.689743 704.19067,55.640538 739.50706,70.776132 765.82742,84.746408 806.18899,82.600076 828.46502,81.41549 835.12463,76.053099 852.44969,61.203049 866.33697,49.299665 856.95105,31.799666 850.80018,11.809327 845.63539,-4.9762324 838.88401,-15.809729 830.6043,-32.369148 817.39477,-58.788224 819.44992,-50.426987 783.90135,-56.351749 716.81652,-67.532553 648.30038,-61.400717 579.41812,-61.400717 407.33244,-61.400717 235.24676,-61.400717 63.161076,-61.400717 39.781511,-61.400717 15.806048,-63.344929 -7.5244843,-61.400717 -21.494233,-60.236572 -22.67139,-38.626836 -22.67139,-18.484484 -22.67139,-0.50471779 -17.622422,16.824659 -17.622422,35.791928 -17.622422,57.427154 -17.694089,59.650074 -30.244843,77.445919" HorizontalAlignment="Center" Height="179" Margin="-14.5,-58.009,-70.5,0" Stretch="Fill" VerticalAlignment="Top" Width="895">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.472,1.343" StartPoint="0.499,-0.414">
+                    <GradientStop Color="#FF0D1123" Offset="0.183"/>
+                    <GradientStop Color="#FF21327C" Offset="0.544"/>
+                    <GradientStop Color="#FF4157B4" Offset="0.941"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M945.19561,-209.62782 C902.98016,-226.22941 826.60531,-216.03983 771.06435,-197.11921 727.63108,-182.32321 700.93338,-164.90159 655.50916,-142.13572 607.78685,-118.21809 559.12408,-85.773731 493.40717,-101.42457 422.4495,-118.32353 404.41418,-158.62808 346.37212,-197.78562 285.71231,-238.70921 180.66338,-265.33382 123.82525,-247.39331 80.885313,-233.83966 55.650762,-198.20287 55.650762,-198.20287 55.650762,-198.20287 47.290016,-187.46756 51.929275,-157.31237 57.568922,-120.65467 60.815325,-75.518405 53.191517,-37.399366 162.10291,-37.399366 272.78146,-42.448334 382.63672,-42.448334 444.06584,-42.448334 505.49496,-42.448334 566.92407,-42.448334 626.89883,-42.448334 683.32224,-43.460288 742.37573,-50.021787 774.75172,-53.61912 806.79665,-64.273744 839.56838,-68.95542 854.90738,-71.146706 927.45686,-56.554093 929.18757,-79.053357 931.06994,-103.52412 933.6291,-132.88398 929.18757,-157.31237 922.92855,-191.73697 1001.5233,-208.381 945.92856,-209.57659" HorizontalAlignment="Center" Height="216" Margin="-24.5,217.937,-80.5,-8.937" Stretch="Fill" VerticalAlignment="Top" Width="915">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.603,1.325" StartPoint="0.406,-0.736">
+                    <GradientStop Color="#FF432E68" Offset="0.865"/>
+                    <GradientStop Color="#FFA03F8A" Offset="0.359"/>
+                    <GradientStop Color="#FF933F87" Offset="0.046"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M945.19561,-209.62782 C902.98016,-226.22941 828.53807,-228.05453 772.99711,-209.13392 729.56383,-194.33791 682.0754,-167.19355 640.85723,-150.01931 591.58297,-129.48837 551.11949,-108.58449 489.33758,-121.88072 446.54253,-131.09074 410.145,-158.11657 343.11106,-193.10432 250.24387,-241.57549 182.14331,-255.75278 125.30517,-237.81228 82.365244,-224.25863 58.112779,-187.58147 58.112779,-187.58147 58.112779,-187.58147 47.290016,-187.46756 51.929275,-157.31237 57.568922,-120.65467 60.815325,-75.518405 53.191517,-37.399366 162.10291,-37.399366 272.78146,-42.448334 382.63672,-42.448334 444.06584,-42.448334 505.49496,-42.448334 566.92407,-42.448334 626.89883,-42.448334 683.32224,-43.460288 742.37573,-50.021787 774.75172,-53.61912 806.79665,-64.273744 839.56838,-68.95542 854.90738,-71.146706 927.45686,-56.554093 929.18757,-79.053357 931.06994,-103.52412 933.6291,-132.88398 929.18757,-157.31237 922.92855,-191.73697 1001.5233,-208.381 945.92856,-209.57659" HorizontalAlignment="Center" Height="208" Margin="-24.5,270.018,-80.5,-53.018" Stretch="Fill" VerticalAlignment="Top" Width="915">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.553,1.592" StartPoint="0.406,-0.736">
+                    <GradientStop Color="#FFDE5182" Offset="0.117"/>
+                    <GradientStop Color="#FF3A306E" Offset="0.919"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Rectangle HorizontalAlignment="Left" Height="405" Margin="10,10,0,0" VerticalAlignment="Top" Width="790" Fill="#4C000000"/>
+        <Label Content="Практика" HorizontalAlignment="Center" Margin="351.707,10,350.699,0" VerticalAlignment="Top" FontFamily="Pobeda" FontSize="36" Background="{x:Null}" Foreground="#FFEACFA0"/>
+        <TextBlock HorizontalAlignment="Left" Height="65.583" Margin="36.323,74.664,0,0" TextWrapping="Wrap" Text="Вопрос" VerticalAlignment="Top" Width="736.546" FontFamily="Pobeda" FontSize="24" Foreground="#FFEACFA0" UseLayoutRounding="False" Panel.ZIndex="15"/>
+        <Button x:Name="Вариант1" Content="Button" Margin="56.502,157,444.913,231.65" Style="{DynamicResource ButtonStyle1}"/>
+        <Button x:Name="Вариант2" Content="Button" Margin="56.502,217.937,444.913,170.713" Style="{DynamicResource ButtonStyle2}"/>
+        <Button x:Name="Вариант3" Content="Button" Margin="56.502,277.081,444.913,111.569" Style="{DynamicResource ButtonStyle5}"/>
+        <Button x:Name="Вариант4" Content="Button" Margin="56.502,335.986,444.913,52.664" Style="{DynamicResource ButtonStyle4}"/>
+        <Button x:Name="Проверить" Content="Button" Margin="436.883,157,64.532,231.65" Style="{DynamicResource ButtonStyle6}"/>
+        <Grid x:Name="Пояснение_ответа" Margin="436.883,217.937,64.532,50.664">
+            <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="9.081" RadiusY="9.081" Fill="#B2AE6C8F">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label x:Name="label" Width="308.585" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,2" Height="154.399" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="Верно/неверно. Пояснение">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+
+        </Grid>
+
+    </Grid>
+</UserControl>
