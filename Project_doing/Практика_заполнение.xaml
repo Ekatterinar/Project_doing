@@ -246,6 +246,183 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle10" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Кнопка_варианта">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFAE6C8F"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Fill="#B2AE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label_Copy" Width="148.999" VerticalContentAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="35.779,0,38.755,0" Height="51.28" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="Назад">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle3" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Кнопка_варианта_Copy">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFAE6C8F"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="Кнопка_варианта_Copy" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Margin="16.721,8.326,13.745,8.326" Fill="#B2AE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label_Copy" Width="148.999" VerticalContentAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="51.28" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="Далее">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle8" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="grid">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask)" Storyboard.TargetName="grid">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <SolidColorBrush Color="#00000000"/>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask)" Storyboard.TargetName="grid">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <SolidColorBrush Color="Black"/>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask)" Storyboard.TargetName="grid">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <SolidColorBrush Color="#CC000000"/>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle Width="36.478" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="-0.063,12.965,0,0" Height="9.237" HorizontalAlignment="Left" Fill="#CAAE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-45.74"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Rectangle Width="36.478" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="-0.063,12.965,0,0" Height="9.237" HorizontalAlignment="Left" Fill="#CAAE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="46.757"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid MinHeight="425" MaxHeight="425" MinWidth="810" MaxWidth="810" Margin="0,0,-10,25">
@@ -293,9 +470,9 @@
             <Rectangle HorizontalAlignment="Left" Height="405" Margin="10,10,0,0" VerticalAlignment="Top" Width="790" Fill="#4C000000"/>
             <Label Content="Практика" HorizontalAlignment="Center" Margin="351.707,10,350.699,0" VerticalAlignment="Top" FontFamily="Pobeda" FontSize="36" Background="{x:Null}" Foreground="#FFEACFA0"/>
             <TextBlock HorizontalAlignment="Left" Height="65.583" Margin="36.323,74.664,0,0" TextWrapping="Wrap" Text="Вопрос" VerticalAlignment="Top" Width="736.546" FontFamily="Pobeda" FontSize="24" Foreground="#FFEACFA0" UseLayoutRounding="False" Panel.ZIndex="15"/>
-            <Button x:Name="Проверить" Content="Button" Margin="436.883,157,64.532,231.65" Style="{DynamicResource ButtonStyle6}"/>
-            <Grid x:Name="Пояснение_ответа" Margin="436.883,217.937,64.532,50.664">
-                <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="9.081" RadiusY="9.081" Fill="#B2AE6C8F">
+            <Button x:Name="Проверить" Content="Button" Margin="436.883,143.247,64.532,245.403" Style="{DynamicResource ButtonStyle6}"/>
+            <Grid x:Name="Пояснение_ответа" Margin="436.883,218.937,64.532,49.664">
+                <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="9.081" RadiusY="9.081" Fill="#B2AE6C8F" Margin="0,-14,0,14">
                     <Rectangle.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -305,7 +482,7 @@
                         </TransformGroup>
                     </Rectangle.RenderTransform>
                 </Rectangle>
-                <Label x:Name="label" Width="308.585" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,2" Height="154.399" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="Верно/неверно. Пояснение">
+                <Label x:Name="label" Width="308.585" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,-11,0,13" Height="154.399" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="Верно/неверно. Пояснение">
                     <Label.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -317,9 +494,12 @@
                 </Label>
 
             </Grid>
-            <TextBox HorizontalAlignment="Left" Height="217.336" Margin="81.309,157,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="304.821" Style="{DynamicResource TextBoxStyle1}"/>
+            <TextBox HorizontalAlignment="Left" Height="217.336" Margin="81.309,143.247,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="304.821" Style="{DynamicResource TextBoxStyle1}"/>
+            <Button x:Name="Далее" Content="Button" Margin="641.001,365.72,20,8" Style="{DynamicResource ButtonStyle3}"/>
 
         </Grid>
+        <Button x:Name="Назад" Content="Button" Margin="32,374.067,649.467,41.305" Style="{DynamicResource ButtonStyle10}" OpacityMask="Black"/>
+        <Button x:Name="Krest_in_english_for_Andrey" Content="Button" Margin="762.435,12,1,404.833" Style="{DynamicResource ButtonStyle8}" OpacityMask="Black"/>
 
     </Grid>
 </UserControl>

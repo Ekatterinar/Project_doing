@@ -711,6 +711,108 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle11" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Кнопка_варианта">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFAE6C8F"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="Кнопка_варианта" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Fill="#B2AE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label_Copy" Width="148.999" VerticalContentAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="35.779,0,38.755,0" Height="51.28" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="Назад">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle12" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Кнопка_варианта_Copy">
+                                                <EasingColorKeyFrame KeyTime="0" Value="#FFAE6C8F"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="Кнопка_варианта_Copy" RenderTransformOrigin="0.5,0.5" RadiusX="22.197" RadiusY="22.197" Margin="16.721,8.326,13.745,8.326" Fill="#B2AE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Label x:Name="label_Copy" Width="148.999" VerticalContentAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="51.28" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontFamily="Pobeda" FontSize="24" Foreground="#FFD3C09E" Content="Далее">
+                                <Label.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Label.RenderTransform>
+                            </Label>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
     <UserControl.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
@@ -771,14 +873,13 @@
             <Button x:Name="Тема3" Content="Button" Margin="432.524,55.106,41.443,262.128" Style="{DynamicResource ButtonStyle8}" OpacityMask="Black"/>
             <Button x:Name="Тема4" Content="Button" Margin="432.524,212.303,41.443,103.914" Style="{DynamicResource ButtonStyle9}" OpacityMask="Black"/>
             <Button x:Name="Назад" Content="Button" Margin="318,355.415,316.467,18.305" Style="{DynamicResource ButtonStyle10}" OpacityMask="Black"/>
-            <ScrollViewer x:Name="scrollViewer" HorizontalAlignment="Left" Height="407.788" Margin="12.018,8.221,0,0" VerticalAlignment="Top" Width="778.429" Background="#4C000000" OpacityMask="Black">
-                <TextBlock x:Name="textBlock" Height="665.164" TextWrapping="Wrap" Width="765.807" FontFamily="Times New Roman" FontSize="24" Foreground="#FFD3C097" TextAlignment="Center"><Run Text="Место для заголовка"/><Run Text=" "/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><Run Text="&#x9;"/><LineBreak/><InlineUIContainer>
-                        <Button
-                            Width="363.037" Style="{DynamicResource ButtonStyle1}" x:Name="практика_переход" Height="54.256" Content="Button" Background="Black"/>
-                    </InlineUIContainer><LineBreak/></TextBlock>
+            <ScrollViewer x:Name="scrollViewer" HorizontalAlignment="Left" Height="368.194" Margin="12.018,8.221,0,0" VerticalAlignment="Top" Width="778.429" Background="#4C000000" OpacityMask="Black">
+                <TextBlock x:Name="textBlock" Height="665.164" TextWrapping="Wrap" Width="765.807" FontFamily="Times New Roman" FontSize="24" Foreground="#FFD3C097" TextAlignment="Center"><Run Text="Место для заголовка"/><Run Text=" "/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><Run Text="&#x9;"/><LineBreak/><LineBreak/></TextBlock>
             </ScrollViewer>
 
         </Grid>
+        <Button x:Name="Назад_Copy" Content="Button" Margin="12.018,385.009,669.449,30.363" Style="{DynamicResource ButtonStyle11}" OpacityMask="Black"/>
+        <Button x:Name="Далее" Content="Button" Margin="655.001,376.683,-4,22.037" Style="{DynamicResource ButtonStyle12}"/>
 
     </Grid>
 </UserControl>

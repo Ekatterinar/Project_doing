@@ -428,6 +428,155 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle6" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid Margin="0,-16,0,12">
+                            <Rectangle Width="52" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="13.167" HorizontalAlignment="Left" Fill="#CAAE6C8F" Margin="0,16,0,0">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-45.74"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Rectangle Width="52" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="13.167" HorizontalAlignment="Left" Fill="#CAAE6C8F" Margin="0,16,0,0">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="46.757"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle7" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid Margin="0,14,15.435,0">
+                            <Rectangle Width="36.478" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="-0.063,12.965,0,0" Height="9.237" HorizontalAlignment="Left" Fill="#CAAE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-45.74"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Rectangle Width="36.478" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="-0.063,12.965,0,0" Height="9.237" HorizontalAlignment="Left" Fill="#CAAE6C8F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="46.757"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle8" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="grid">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask)" Storyboard.TargetName="grid">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <SolidColorBrush Color="#00000000"/>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask)" Storyboard.TargetName="grid">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <SolidColorBrush Color="Black"/>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask)" Storyboard.TargetName="grid">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <SolidColorBrush Color="#CC000000"/>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Rectangle x:Name="rectangle" Width="36.478" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="-0.063,12.965,0,0" Height="9.237" HorizontalAlignment="Left" Fill="#CAAE6C8F" OpacityMask="Black">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-45.74"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Rectangle x:Name="rectangle1" Width="36.478" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Margin="-0.063,12.965,0,0" Height="9.237" HorizontalAlignment="Left" Fill="#CAAE6C8F" OpacityMask="Black">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="46.757"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid Width="810" Height="425" MaxWidth="810" MinWidth="810" MinHeight="425" MaxHeight="425">
         <Grid.ColumnDefinitions>
@@ -485,5 +634,6 @@
         <Label Content="ПРОГРАММА ТРЕНАЖЕР &quot;КОДИРОВАНИЕ ЧИСЕЛ. СИСТЕМЫ СЧИСЛЕНИЯ&quot;" HorizontalAlignment="Left" Margin="56.024,7.212,0,0" VerticalAlignment="Top" Height="42.103" Width="669.684" FontSize="36" BorderBrush="Black" Foreground="#FFD3C09E" Grid.ColumnSpan="2" FontFamily="Pobeda"/>
         <Label Content="ВАШ ПРОГРЕСС %" HorizontalAlignment="Stretch" Margin="61.694,72.682,610.237,309.264" VerticalAlignment="Stretch" Foreground="#FFD3C09E" FontFamily="Pobeda" FontSize="24" Grid.ColumnSpan="2"/>
         <ProgressBar x:Name="прогресс" HorizontalAlignment="Left" Height="15.772" Margin="61.694,60.325,0,0" Style="{DynamicResource ProgressBarStyle1}" VerticalAlignment="Top" Width="661.61" Grid.ColumnSpan="2"/>
+        <Button x:Name="Krest_in_english_for_Andrey" Grid.ColumnSpan="2" Content="Button" Margin="764.435,1,9,390.833" Style="{DynamicResource ButtonStyle8}" OpacityMask="Black"/>
     </Grid>
 </Window>
